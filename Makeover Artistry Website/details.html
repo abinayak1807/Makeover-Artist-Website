@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Details Booking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: #eee;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .main-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 16px #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px;
+    }
+    .form-section {
+      flex: 2;
+      min-width: 300px;
+      margin-right: 24px;
+    }
+    .sidebar {
+      flex: 1;
+      min-width: 220px;
+      background: #f7f7f7;
+      border-radius: 8px;
+      padding: 18px;
+      box-sizing: border-box;
+      margin-top: 10px;
+      height: fit-content;
+    }
+    .form-section h2 {
+      margin: 0 0 15px 0;
+      font-size: 1.13em;
+      font-weight: bold;
+    }
+    .form-section label {
+      display: block;
+      margin-top: 16px;
+      font-weight: 500;
+      color: #333;
+    }
+    .form-section input,
+    .form-section select,
+    .form-section textarea {
+      width: 100%;
+      outline: none;
+      padding: 9px;
+      margin-top: 2px;
+      margin-bottom: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: .97em;
+      box-sizing: border-box;
+    }
+    .form-section textarea {
+      min-height: 50px;
+      resize: vertical;
+    }
+    .form-section .top-alert {
+      background: #eee;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 11px;
+      margin-bottom: 10px;
+      font-size: .93em;
+      color: #222;
+    }
+    .form-section .top-alert a {
+      color: #2656c2;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 1em;
+    }
+    .sidebar .booking-title {
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+    .sidebar .booking-info {
+      margin: 7px 0;
+      font-size: .95em;
+      color: #444;
+    }
+    .sidebar .booking-date {
+      font-weight: bold;
+      margin-bottom: 7px;
+      color: #222;
+    }
+    .sidebar .payment {
+      margin: 12px 0 6px 0;
+      color: #26007a;
+      font-weight: 500;
+      font-size: .95em;
+    }
+    .sidebar .book-btn {
+      background: #7272e9;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 0;
+      width: 100%;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 13px;
+      margin-bottom: 3px;
+      transition: background 0.2s;
+    }
+    .sidebar .book-btn:hover {
+      background: #3a49c2;
+    }
+    @media (max-width: 600px) {
+      .main-container {
+        flex-direction: column;
+        padding: 10px;
+      }
+      .form-section {
+        margin-right: 0;
+      }
+      .sidebar {
+        margin-top: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+      <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="main-container">
+    <div class="form-section">
+      <h2>Client Details</h2>
+      <div>
+        <div class="top-alert">
+          <strong>Already Have An Account?</strong> <a href="#">Log In For Faster Booking.</a>
+        </div>
+        <form id="bookingForm">
+          <label>Name *</label>
+          <input type="text" name="name" required>
+          <label>Email *</label>
+          <input type="email" name="email" required>
+          <label>Phone Number</label>
+          <div style="display:flex; gap:6px;">
+            <select name="phoneCode" style="width:72px;"><option value="+91">+91</option></select>
+            <input type="tel" name="phone" pattern="[0-9]{10}" maxlength="10" style="flex:1;">
+          </div>
+          <label>Street *</label>
+          <input type="text" name="street" required>
+          <label>Apt. / Floor No.</label>
+          <input type="text" name="apt">
+          <label>City *</label>
+          <input type="text" name="city" required>
+          <label>State</label>
+          <input type="text" name="state">
+          <label>Add Your Message</label>
+          <textarea name="message"></textarea>
+        </form>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="booking-title">Booking Details</div>
+      <div class="booking-info">Bridal Makeup Luxury Package<br>Rs 25000 Negotiable</div>
+      <div class="booking-date">12 May 2025 At 2:30 AM</div>
+      <div class="booking-info">Client's Place<br>Admin<br>8 Hr</div>
+      <div class="payment">Payment Details<br>Rs 25000 Negotiable</div>
+      <div class="booking-info" style="font-size:.92em; color:#666; margin:4px 0 11px 0;">By Completing Your Booking, You Agree To Receive Related SMS Notifications.</div>
+      <button class="book-btn" type="submit" form="bookingForm" onclick="bookedAlert(event)">Book Now</button>
+    </div>
+  </div>
+  <!--Footer-->
+   <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function bookedAlert(event) {
+      event.preventDefault();
+      alert("Booking completed!\nYour appointment is booked.");
+    }
+  </script>
+</body>
+</html>

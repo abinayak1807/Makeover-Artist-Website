@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery 3x5</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+   <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      background: #eaddf8;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .gallery-section {
+      max-width: 1000px;
+      margin: 36px auto;
+      padding: 0 10px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #f5f5f5;
+      box-shadow: 0 1.5px 8px rgba(90,80,105,0.07);
+      display: block;
+      transition: transform 0.6s ease; /* smooth flip */
+      cursor: pointer;
+    }
+    @media (max-width: 800px) {
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .gallery-img {
+        height: 120px;
+      }
+    }
+    @media (max-width: 500px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .gallery-img {
+        height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!--Gallery-->
+  <div class="gallery-section">
+    <div class="gallery-grid">
+      <!-- Row 1 -->
+      <img class="gallery-img" src="images/bridel face.jpeg" alt="Gallery">
+      <img class="gallery-img" src="images/bridel3.jpeg" alt="Gallery">
+      <img class="gallery-img" src="images/face1-removebg-preview.png" alt="Gallery">
+      <!-- Row 2 -->
+      <img class="gallery-img" src="images/bridel5.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/bridel6.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/party w2.jpg" alt="Gallery">
+      <!-- Row 3 -->
+      <img class="gallery-img" src="images/hairst.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/hairst2.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/hair brid.jpg" alt="Gallery">
+      <!-- Row 4 -->
+      <img class="gallery-img" src="images/party w.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/party ma1.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/party saree.jpg" alt="Gallery">
+      <!-- Row 5 -->
+      <img class="gallery-img" src="images/chudi.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/chudi2.jpg" alt="Gallery">
+      <img class="gallery-img" src="images/bride new.jpg" alt="Gallery">
+    </div>
+  </div>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Flip Script -->
+  <script>
+    document.querySelectorAll(".gallery-img").forEach(img => {
+      img.addEventListener("click", () => {
+        if (img.style.transform === "scaleX(-1)") {
+          img.style.transform = "scaleX(1)";
+        } else {
+          img.style.transform = "scaleX(-1)";
+        }
+      });
+    });
+  </script>
+</body>
+</html>

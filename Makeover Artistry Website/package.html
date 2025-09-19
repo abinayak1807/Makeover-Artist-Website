@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bridal Packages</title>
+<link rel="stylesheet" href="style.css">
+ <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style>
+  body {
+    background: #e7d7e5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  .main-section {
+    max-width: 900px;
+    margin: 36px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    padding: 24px 26px 22px 26px;
+  }
+  .section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+  .tab-menu {
+    display: flex;
+    justify-content: left;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 14px;
+    gap: 32px;
+    font-size: 1.07rem;
+    font-weight: 500;
+  }
+  .tab-menu button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #222;
+    padding: 8px 0;
+    font-size: 1.07rem;
+    cursor: pointer;
+    position: relative;
+  }
+  .tab-menu .active {
+    color: #b22f77;
+    border-bottom: 2.5px solid #b22f77;
+  }
+  .package-list {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .package-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 18px;
+  }
+  .package-card:last-child {
+    border-bottom: none;
+  }
+  .package-img {
+    width: 78px;
+    height: 78px;
+    border-radius: 9px;
+    object-fit: cover;
+    background: #eee;
+    margin-right: 3px;
+  }
+  .package-info {
+    flex: 2;
+  }
+  .package-title {
+    font-weight: bold;
+    font-size: 1.08rem;
+    margin-bottom: 8px;
+    color: #101;
+  }
+  .package-desc {
+    font-size: 0.96rem;
+    color: #474747;
+    margin-bottom: 9px;
+  }
+  .package-meta {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 3px;
+    display: flex;
+    gap: 24px;
+    font-weight: 500;
+  }
+  .package-price {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+  }
+  .package-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+  .book-btn {
+    background: #9e2b6e;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    padding: 9px 28px;
+    font-size: 1.02rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: none;
+    text-align: center;
+    margin-left: auto;
+    transition: background 0.18s;
+  }
+  .book-btn:hover {
+    background: #c94497;
+  }
+  @media (max-width: 780px) {
+    .package-card {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .package-action {
+      margin-top: 9px;
+      margin-left: 0;
+      justify-content: flex-start;
+    }
+    .package-list {gap: 24px;}
+    .main-section {padding: 14px 6px;}
+  }
+</style>
+</head>
+<body>
+   <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+<div class="main-section">
+  <div class="section-title">BRIDAL PACKAGES</div>
+  <div class="tab-menu">
+    <button>ALL SERVICES</button>
+    <button class="active">BRIDAL PACKAGES</button>
+    <button>PARTY MAKEUP PACKAGES</button>
+    <button>SAREE DRAPING</button>
+    <button>HAIRSTYLING</button>
+  </div>
+  <div class="package-list">
+    <!-- Package 1 -->
+    <div class="package-card">
+      <img class="package-img" src="images/face1-removebg-preview.png" alt="Bridal Makeup Luxury Package"/>
+      <div class="package-info">
+        <div class="package-title">Bridal Makeup Luxury Package</div>
+        <div class="package-desc">Indulge In Bridal Elegance: Experience Our Luxury Makeup Package!</div>
+        <div class="package-meta">
+          <span>8 Hr</span>
+          <span class="package-price">Rs 25000 Negotiable</span>
+        </div>
+      </div>
+      <div class="package-action">
+        <button class="book-btn" onclick="window.location.href='schedule.html'">BOOK NOW</button>
+      </div>
+    </div>
+    <!-- Package 2 -->
+    <div class="package-card">
+      <img class="package-img" src="images/face2-removebg-preview.png" alt="Bridal Makeup Premium Package"/>
+      <div class="package-info">
+        <div class="package-title">Bridal Makeup Premium Package</div>
+        <div class="package-desc">Unleash Your Bridal Beauty: Experience The Premium Makeup Package!</div>
+        <div class="package-meta">
+          <span>6 Hr</span>
+          <span class="package-price">Rs 18000 Negotiable</span>
+        </div>
+      </div>
+      <div class="package-action">
+        <button class="book-btn" onclick="window.location.href='schedule.html'">BOOK NOW</button>
+      </div>
+    </div>
+    <!-- Package 3 -->
+    <div class="package-card">
+      <img class="package-img" src="images/bridel6.jpg" alt="Basic Bridal Makeup Package"/>
+      <div class="package-info">
+        <div class="package-title">Basic Bridal Makeup Package</div>
+        <div class="package-desc">Simply Beautiful: Discover Our Basic Bridal Makeup Package!</div>
+        <div class="package-meta">
+          <span>2 Hr</span>
+          <span class="package-price">Rs 12000 Negotiable</span>
+        </div>
+      </div>
+      <div class="package-action">
+        <button class="book-btn" onclick="window.location.href='schedule.html'">BOOK NOW</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <!--Footer-->
+   <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

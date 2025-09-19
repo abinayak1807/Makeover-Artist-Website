@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Services Grid</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+     <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      background: #eaddf8;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .services-section {
+      max-width: 1200px;
+      margin: 32px auto;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .services-section h2 {
+      font-size: 1.3em;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 30px;
+      letter-spacing: 0.5px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(120,70,110,0.11);
+      padding: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 325px;
+      transition: box-shadow 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 6px 22px rgba(120,70,110,0.18);
+    }
+    .service-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      margin-bottom: 12px;
+      background: #eee;
+    }
+    .service-title {
+      font-weight: 700;
+      font-size: 1.15em;
+      margin: 6px 0 6px 0;
+      text-align: center;
+    }
+    .service-desc {
+      font-size: 1em;
+      font-weight: 500;
+      color: #29212c;
+      margin: 0 14px 12px 14px;
+      text-align: center;
+      line-height: 1.35em;
+      min-height: 60px;
+      max-height: 85px;
+      overflow: hidden;
+    }
+    .service-btn {
+      background: #7d2868;
+      color: #fff;
+      font-weight: 600;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      padding: 11px 26px;
+      margin-top: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 1px 4px rgba(90,30,90,0.07);
+    }
+    .service-btn:hover {
+      background: #974bad;
+    }
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .service-card img {
+        height: 120px;
+      }
+    }
+    @media (max-width: 600px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+      .service-card img {
+        height: 98px;
+      }
+      .service-card {
+        min-height: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+     <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+  <section class="services-section">
+    <h2>SERVICES</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/bride new.jpg" alt="Bridal Makeup">
+        <div class="service-title">Bridal Makeup</div>
+        <div class="service-desc">
+          An Exceptional Bridal Makeup, Hairstyling Outfit, And Jewelry Make You Look Dazzling, One Lifes Unforgettable Day At The Wedding.
+        </div>
+        <button class="service-btn"  onclick="window.location.href='package.html'">BOOK NOW</button>
+      </div>
+      <div class="service-card">
+        <img src="images/party n.jpg" alt="Party Makeup">
+        <div class="service-title">Party Makeup</div>
+        <div class="service-desc">
+          Parties Play A Significant Role In Every Woman's Life. Eyes Are Over The Moon And Down Plans To Get Ready Soon.
+        </div>
+        <button class="service-btn"  onclick="window.location.href='package.html'">BOOK NOW</button>
+      </div>
+      <div class="service-card">
+        <img src="images/saree drap.jpg" alt="Saree Draping">
+        <div class="service-title">Saree Draping</div>
+        <div class="service-desc">
+          The Ethnic And Most Prevalent Traditional Wear For Any Indian Woman - Saree Draping. Easiest Way For Women To Love To Drape A Saree.
+        </div>
+        <button class="service-btn"  onclick="window.location.href='package.html'">BOOK NOW</button>
+      </div>
+      <div class="service-card">
+        <img src="images/hair brid.jpg" alt="Hairstyling">
+        <div class="service-title">Hairstyling</div>
+        <div class="service-desc">
+          Holding Hands With A Professional Hairdresser, Let Your Hairstyle Speak For You. Your Hair, Our Art, Our Passion.
+        </div>
+        <button class="service-btn"  onclick="window.location.href='package.html'">BOOK NOW</button>
+      </div>
+      <div class="service-card">
+        <img src="images/bridel3.jpeg" alt="Bridal Makeup Family Package">
+        <div class="service-title">Bridal Makeup Family Package</div>
+        <div class="service-desc">
+          A Wedding Is An Extraordinary Day. Hairdressing And Makeup For Any And All Family Members.
+        </div>
+        <button class="service-btn"  onclick="window.location.href='package.html'">BOOK NOW</button>
+      </div>
+      <div class="service-card">
+        <img src="images/party n2.jpg" alt="Party Makeup Bulk Package">
+        <div class="service-title">Party Makeup Bulk Package</div>
+        <div class="service-desc">
+          Makeup Adds Beauty To Life And Is Always Required. Bulk Party Makeup Packages For Women Have Above Core Conviction.
+        </div>
+        <button class="service-btn"  onclick="window.location.href='package.html'">BOOK NOW</button>
+      </div>
+    </div>
+  </section>
+   <!--Footer-->
+   <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

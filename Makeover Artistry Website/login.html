@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body {
+      background: #eaddf8;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 40px 30px 20px 30px;
+      background: transparent;
+      box-shadow: 0 0 10px rgba(0,0,0,0.07);
+      border-radius: 10px;
+      text-align: center;
+    }
+    h1, label, .signup-link, .signup-link a, .forgot, .login-btn, .divider span {
+      font-weight: 600;
+    }
+    h1 {
+      margin-bottom: 8px;
+    }
+    .signup-link {
+      margin-bottom: 20px;
+      font-size: 1.08em;
+      font-weight: 600;
+    }
+    .signup-link a {
+      color: #5465ff;
+      text-decoration: underline;
+      margin-left: 8px;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    label {
+      text-align: left;
+      margin-bottom: 2px;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    input[type="email"], input[type="password"] {
+      padding: 10px 8px;
+      border: none;
+      border-bottom: 1.4px solid #555;
+      background: none;
+      outline: none;
+      margin-bottom: 12px;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .forgot {
+      text-align: right;
+      display: block;
+      margin-bottom: 18px;
+      color: #5465ff;
+      text-decoration: underline;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .login-btn {
+      background-color: #839fff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0;
+      font-size: 1.05em;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background 0.2s;
+      font-weight: 600;
+    }
+    .login-btn:hover {
+      background-color: #5465ff;
+    }
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 25px 0 15px 0;
+      gap: 10px;
+    }
+    .divider hr {
+      flex: 1;
+      border: none;
+      border-top: 1.4px solid #888;
+    }
+    .divider span {
+      color: #222;
+      font-size: 1em;
+      font-weight: 600;
+    }
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 10px;
+    }
+    .social-login a {
+      font-size: 2em;
+      color: #5465ff;
+      transition: color 0.2s;
+    }
+    .social-login a:hover {
+      color: #839fff;
+    }
+    @media (max-width: 600px) {
+      .container {
+        max-width: 95vw;
+        margin: 20px auto;
+        padding: 20px 4vw 10px 4vw;
+      }
+      h1 {
+        font-size: 1.4em;
+      }
+      .social-login a {
+        font-size: 1.5em;
+      }
+    }
+  </style>
+</head>
+<body>
+   <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Login</h1>
+    <div class="signup-link">
+      <span>New To This Site?</span> <a href="signup.html">Sign Up</a>
+    </div>
+    <form>
+      <label>Email</label>
+      <input type="email" required>
+      <label>Password</label>
+      <input type="password" required>
+      <a href="#" class="forgot">forgot password?</a>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+    <div class="divider">
+      <hr>
+      <span>or login with</span>
+      <hr>
+    </div>
+    <div class="social-login">
+      <a href="#"><i class="fab fa-google"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+    </div>
+  </div>
+  <!--Footer-->
+   <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

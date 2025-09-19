@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Schedule Your Service</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    background: #e7d7e5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  .main-section {
+    max-width: 960px;
+    margin: 36px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+    padding: 28px 36px 42px 36px;
+    position: relative;
+  }
+  .back-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #222;
+    font-size: 1rem;
+    font-family: inherit;
+    position: absolute;
+    left: 22px;
+    top: 18px;
+    padding: 0;
+  }
+  .back-arrow {
+    font-size: 1.3rem;
+    margin-right: 7px;
+    line-height: 1;
+  }
+  .service-title {
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: bold;
+    margin-bottom: 18px;
+    margin-top: 12px;
+  }
+  .service-desc {
+    text-align: center;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 24px;
+  }
+  .table-row {
+    display: flex;
+    gap: 22px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1.6px solid #e2d4eb;
+    padding-bottom: 10px;
+    font-size: 1.09rem;
+    font-weight: 500;
+  }
+  .table-col {
+    flex: 1 1 260px;
+    text-align: center;
+    color: #333;
+  }
+  .table-col:not(:last-child) {
+    border-right: 1px solid #e6e2ee;
+  }
+  .content-row {
+    display: flex;
+    gap: 22px;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 18px;
+    font-size: 1rem;
+  }
+  .col-calendar {
+    flex: 1 1 280px;
+    text-align: center;
+  }
+  /* Make Flatpickr calendar take full column width */
+  .flatpickr-calendar {
+    width: 100% !important;
+  }
+  .col-time {
+    flex: 1 1 220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: center;
+  }
+  .time-btn {
+    padding: 8px 14px;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .time-btn.selected, .time-btn:hover {
+    background: #6c8cff;
+    border-color: #6c8cff;
+    color: white;
+  }
+  .col-right {
+    flex: 1 1 320px;
+    color: #333;
+  }
+  .service-details {
+    line-height: 1.4;
+  }
+  .service-details b {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .btn-purple {
+    background: #a5a7f7;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 11px 38px;
+    font-size: 1.01rem;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: none;
+    text-align: center;
+    margin-top: 20px;
+    transition: background 0.18s;
+  }
+  .btn-purple:hover {
+    background: #6c8cff;
+  }
+  @media (max-width: 900px) {
+    .content-row, .table-row {
+      flex-direction: column;
+      gap: 18px;
+    }
+    .col-calendar, .col-time, .col-right {
+      flex: 1 1 auto;
+      text-align: left;
+      border-right: none;
+      border-bottom: 0.5px solid #d8d6de;
+      padding-bottom: 12px;
+    }
+    .btn-purple {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+        <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="main-section">
+    <button class="back-btn" onclick="window.location.href='schedule.html'">
+      <span class="back-arrow">&#8592;</span> Back
+    </button>
+    <div class="service-title">Schedule Your Service</div>
+    <div class="service-desc">Check Out Our Availability And Book The Date And Time That Works For You</div>
+    <div class="table-row">
+      <div class="table-col">Select A Date And Time</div>
+      <div class="table-col">India Standard Time (IST)</div>
+      <div class="table-col">Service Details</div>
+    </div>
+    <div class="content-row">
+      <div class="col-calendar">
+        <input type="text" id="datePicker" placeholder="Select Date" />
+      </div>
+      <div class="col-time" id="timeSlots">
+        <button class="time-btn">2:30 am</button>
+        <button class="time-btn">3:30 am</button>
+        <button class="time-btn">4:30 am</button>
+        <button class="time-btn selected">5:30 am</button>
+        <button class="time-btn">6:30 am</button>
+      </div>
+      <div class="col-right service-details">
+        <div>Bridal Makeup Luxury Package</div>
+        <div>Rs 25000 Negotiable</div>
+        <div><b>12 May 2025 At 2:30 Am</b></div>
+        <div>Client's Place</div>
+        <div>Admin</div>
+        <div>8 Hr</div>
+        <button class="btn-purple" onclick="window.location.href='details.html'">Request To Book</button>
+      </div>
+    </div>
+  </div>
+<!--Footer-->
+   <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+  flatpickr("#datePicker", {
+    inline: true,
+    minDate: "today",
+    dateFormat: "d/m/Y"
+  });
+
+  // Highlight selected time button
+  const timeButtons = document.querySelectorAll('.time-btn');
+  timeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      timeButtons.forEach(btn => btn.classList.remove('selected'));
+      button.classList.add('selected');
+    });
+  });
+</script>
+</body>
+</html>

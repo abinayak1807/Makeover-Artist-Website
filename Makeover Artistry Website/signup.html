@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Membership</title>
+  <link rel="stylesheet" href="style.css">
+     <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #e6d6e3;
+  min-height: 100vh;
+}
+
+.bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-container {
+  width: 90vw;
+  max-width: 370px;
+  min-height: 440px;
+  background: #e6d6e3;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.13);
+  padding: 34px 22px 28px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.member-row {
+  display: flex;
+  gap: 8px;
+  font-size: 1.37rem;
+  justify-content: center;
+  margin-bottom: 22px;
+   font-weight: bold;
+}
+
+.login-link {
+  color: #3b4cd8;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.form-label {
+  font-size: 1.09rem;
+  margin-bottom: 5px;
+  font-weight: 400;
+   font-weight: bold;
+}
+
+.form-input {
+  border: none;
+  border-bottom: 2px solid #34303a;
+  background: transparent;
+  font-size: 1.20rem;
+  padding: 8px 2px 5px 2px;
+  outline: none;
+  margin-bottom: 8px;
+  width: 100%;
+  transition: border-color 0.2s;
+   font-weight: bolder;
+}
+
+.form-input:focus {
+  border-color: #748cdc;
+}
+
+.captcha-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ddd;
+  border: 2px solid #34303a;
+  border-radius: 3px;
+  padding: 13px 15px;
+  margin-bottom: 7px;
+}
+
+.robot-check {
+  width: 22px;
+  height: 22px;
+  accent-color: #748cdc;
+  margin-right: 7px;
+}
+
+.robot-label {
+  font-size: 1.20rem;
+  font-weight: bolder;
+}
+
+.signup-btn {
+  background: #8194f7;
+  border: none;
+  color: #fff;
+  font-size: 1.16rem;
+  border-radius: 7px;
+  margin-top: 12px;
+  padding: 11px 0;
+  width: 100%;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.22s;
+}
+
+.signup-btn:hover {
+  background: #7385d5;
+}
+
+/* Responsive tweaks */
+@media (max-width: 510px) {
+  .signup-container {
+    max-width: 98vw;
+    padding: 14px 4vw 20px 4vw;
+  }
+  .title { font-size: 1.5rem; }
+  .member-row { font-size: 1.10rem; }
+  .form-label, .robot-label { font-size: 1em; }
+  .signup-btn { font-size: 1em; }
+}
+
+  </style>
+</head>
+<body>
+   <!--Header-->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <img src="images/bueaty_lg2-removebg-preview.png" alt="Beauty Logo">
+    </div>
+    <div class="navbar-links">
+      <a href="index.html">Home</a>
+      <a href="service.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="navbar-right">
+      <div class="search-container">
+        <input type="text" placeholder="Search">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="navbar-user">
+        <i class="fa fa-user" onclick="window.location.href='signup.html'"></i>
+      </div>
+    </div>
+  </nav>
+  <div class="bg">
+    <div class="signup-container">
+      <h1 class="title">Sign Up</h1>
+      <div class="member-row">
+        <span>Already A Member?</span>
+        <a href="login.html" class="login-link" onclick="window.location.href='login.html'">Log In</a>
+      </div>
+      <form class="signup-form" autocomplete="off">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" type="email" class="form-input" required>
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" class="form-input" required>
+        <div class="captcha-row">
+          <input id="robot" type="checkbox" class="robot-check">
+          <label for="robot" class="robot-label">i’m not a robot</label>
+        </div>
+        <button type="submit" class="signup-btn" onclick="window.location.href='login.html'">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <!--Footer-->
+   <footer class="footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Mission</a></li>
+          <li><a href="#">Integrations</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Industries</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Other Links</h4>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Testimonials</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cancellation and Refund</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-location-dot"></i> 8-2-686/DR/9, Banjara Hills, Hyderabad,<br>&nbsp;&nbsp;&nbsp;&nbsp;Telangana 500034</li>
+          <li><i class="fa-solid fa-phone"></i> +91-869-011-0011</li>
+          <li><i class="fa-solid fa-envelope"></i> bookingmyna@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>
+        © 2008 - 2025 Makeover booking service. All Rights Reserved
+      </div>
+      <div class="footer-social">
+        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" title="Envelope"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
